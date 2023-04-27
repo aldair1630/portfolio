@@ -4,8 +4,8 @@ import projImg1 from "../images/img/project-img1.png";
 import projImg2 from "../images/img/project-img2.png";
 import projImg3 from "../images/img/project-img3.png";
 import colorSharp2 from "../images/img/color-sharp2.png";
-import "animate.css";
 import TrackVisibility from "react-on-screen";
+import "animate.css";
 
 export const Projects = () => {
   const projects = [
@@ -42,7 +42,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
@@ -55,11 +55,12 @@ export const Projects = () => {
                 >
                   <h2>Projects</h2>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    In my portfolio I present several projects that I have
+                    developed successfully, using cutting-edge technologies such
+                    as React, Redux, Express and PostgreSQL. My projects are
+                    personalized and efficient solutions, built with a detailed
+                    and results-oriented approach, and always meeting the
+                    client's deadlines and needs.
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
@@ -92,11 +93,18 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="section">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
+                          My Pokemon Project is a web application that allows
+                          users to search, filter, and view detailed information
+                          about Pokemon. The app is built using technologies
+                          like React, Redux, and an external Pokémon API,
+                          allowing for a dynamic and efficient user experience.
+                          In addition, the application has features such as
+                          state management and routing, which makes it complete
+                          and consistent. It is also designed with an intuitive
+                          and attractive interface so that users can enjoy the
+                          Pokémon search experience. Overall, my Pokemon project
+                          is a showcase of my web development skills, and I'm
+                          excited to share it as part of my portfolio.
                         </p>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">

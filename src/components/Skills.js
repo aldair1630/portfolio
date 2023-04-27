@@ -33,7 +33,24 @@ export const Skills = () => {
           <Col>
             <div className="skill-bx">
               <h2>Skills</h2>
-              <p>Lorem ipsum</p>
+              <p>
+                I work in web development, frontend skills, I focus on the
+                visible part of a website, what the user sees and interacts
+                with. I have knowledge of HTML, CSS, JavaScript and popular
+                frameworks like React. It is also important to highlight that I
+                have web design and user experience (UX) skills to create an
+                attractive and easy-to-use website.
+                <br />
+                <br />
+                My backend skills are focused on the behind the scenes of the
+                website, allowing everything to run smoothly. I have knowledge
+                in Javascript programming languages ​​with express.
+                Additionally, I have skills in databases like MySQL, Postgres
+                and Sequelize, web servers, and application architecture to
+                ensure everything runs smoothly behind the scenes. It is also
+                important to highlight that I have web security skills to ensure
+                that the website is safe and reliable.
+              </p>
               <Carousel
                 responsive={responsive}
                 infinite={true}
