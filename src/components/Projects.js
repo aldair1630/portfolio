@@ -95,11 +95,13 @@ export const Projects = () => {
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {
-                            return <ProjectCard
-                            key={index}
-                            {...project}
-                            onClick={() => handleProjectClick(project.url)}
-                          />;
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                onClick={() => handleProjectClick(project.url)}
+                              />
+                            );
                           })}
                         </Row>
                       </Tab.Pane>
