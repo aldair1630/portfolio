@@ -10,32 +10,32 @@ import "animate.css";
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
+      title: "Videogame app",
       description: "Design & Development",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Pokemon app",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "Foods app",
       description: "Design & Development",
       imgUrl: projImg3,
     },
     {
-      title: "Business Startup",
+      title: "Movies app",
       description: "Design & Development",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Students app",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "My first portfolio",
       description: "Design & Development",
       imgUrl: projImg3,
     },
