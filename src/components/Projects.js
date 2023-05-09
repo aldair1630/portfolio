@@ -106,29 +106,10 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="section">
-                        <p>
-                          My Pokemon Project is a web application that allows
-                          users to search, filter, and view detailed information
-                          about Pokemon. The app is built using technologies
-                          like React, Redux, and an external Pokémon API,
-                          allowing for a dynamic and efficient user experience.
-                          In addition, the application has features such as
-                          state management and routing, which makes it complete
-                          and consistent. It is also designed with an intuitive
-                          and attractive interface so that users can enjoy the
-                          Pokémon search experience. Overall, my Pokemon project
-                          is a showcase of my web development skills, and I'm
-                          excited to share it as part of my portfolio.
-                        </p>
+                      <h1>Add projects here</h1>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <h1>Add projects here</h1>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
