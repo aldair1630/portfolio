@@ -13,11 +13,13 @@ export const Projects = () => {
       title: "Videogame app",
       description: "Design & Development",
       imgUrl: projImg1,
+      url: "https://videogamesarb.up.railway.app/"
     },
     {
       title: "Pokemon app",
       description: "Design & Development",
       imgUrl: projImg2,
+      url:"https://frontend-pokemons-app-production.up.railway.app/"
     },
     {
       title: "Foods app",
@@ -38,8 +40,14 @@ export const Projects = () => {
       title: "My first portfolio",
       description: "Design & Development",
       imgUrl: projImg3,
+      url:"https://portafolioarb.netlify.app/"
     },
   ];
+
+    // add this function to handle the click event
+    const handleProjectClick = (url) => {
+      window.location.href = url;
+    };
 
   return (
     <section className="project" id="projects">
@@ -87,7 +95,11 @@ export const Projects = () => {
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
+                            return <ProjectCard
+                            key={index}
+                            {...project}
+                            onClick={() => handleProjectClick(project.url)}
+                          />;
                           })}
                         </Row>
                       </Tab.Pane>
