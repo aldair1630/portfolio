@@ -1,4 +1,5 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom"
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../images/img/project-img1.png";
 import projImg2 from "../images/img/project-img2.png";
@@ -10,36 +11,44 @@ import "animate.css";
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
+      title: "Videogame app",
       description: "Design & Development",
       imgUrl: projImg1,
+      url: "https://videogamesarb.up.railway.app/"
     },
     {
-      title: "Business Startup",
+      title: "Pokemon app",
       description: "Design & Development",
       imgUrl: projImg2,
+      url:"https://frontend-pokemons-app-production.up.railway.app/"
     },
     {
-      title: "Business Startup",
+      title: "Foods app",
       description: "Design & Development",
       imgUrl: projImg3,
     },
     {
-      title: "Business Startup",
+      title: "Movies app",
       description: "Design & Development",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Students app",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "My first portfolio",
       description: "Design & Development",
       imgUrl: projImg3,
+      url:"https://portafolioarb.netlify.app/"
     },
   ];
+
+    // add this function to handle the click event
+    const handleProjectClick = (url) => {
+      window.location.href = url;
+    };
 
   return (
     <section className="project" id="projects">
@@ -87,34 +96,21 @@ export const Projects = () => {
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                onClick={() => handleProjectClick(project.url)}
+                              />
+                            );
                           })}
                         </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="section">
-                        <p>
-                          My Pokemon Project is a web application that allows
-                          users to search, filter, and view detailed information
-                          about Pokemon. The app is built using technologies
-                          like React, Redux, and an external Pokémon API,
-                          allowing for a dynamic and efficient user experience.
-                          In addition, the application has features such as
-                          state management and routing, which makes it complete
-                          and consistent. It is also designed with an intuitive
-                          and attractive interface so that users can enjoy the
-                          Pokémon search experience. Overall, my Pokemon project
-                          is a showcase of my web development skills, and I'm
-                          excited to share it as part of my portfolio.
-                        </p>
+                      <Tab.Pane eventKey="second">
+                      <h1>Add projects here</h1>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <h1>Add projects here</h1>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
