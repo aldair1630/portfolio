@@ -12,7 +12,7 @@ This is my personal portfolio, a web application developed using React. It serve
 
 ## Screenshots
 
-![Portfolio Screenshoot](src/images/portfolioscreenShoot.png)
+![Portfolio Screenshoot](src/images/portfolioScreenshot.png)
 
 ## Installation
 
