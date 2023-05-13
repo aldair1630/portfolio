@@ -1,8 +1,8 @@
 # Personal Portfolio
 
-This is my personal portfolio, a web application developed using React. It serves as a showcase of my projects, skills, and experience in web development.
-
 ![Portfolio Screenshoot](src/images/portfolioScreenshot.png)
+
+This is my personal portfolio, a web application developed using React. It serves as a showcase of my projects, skills, and experience in web development.
 
 ## Features
 
