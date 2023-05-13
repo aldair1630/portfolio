@@ -2,6 +2,8 @@
 
 This is my personal portfolio, a web application developed using React. It serves as a showcase of my projects, skills, and experience in web development.
 
+![Portfolio Screenshoot](src/images/portfolioScreenshot.png)
+
 ## Features
 
 - Visual presentation of my personal and professional information.
@@ -9,10 +11,6 @@ This is my personal portfolio, a web application developed using React. It serve
 - Skills and technologies section, showcasing my areas of expertise.
 - Contact form for easy communication with visitors.
 - Responsive design and styling for an optimal experience on different devices and screen sizes.
-
-## Screenshots
-
-![Portfolio Screenshoot](src/images/portfolioScreenshot.png)
 
 ## Installation
 
