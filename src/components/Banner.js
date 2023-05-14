@@ -12,7 +12,9 @@ export const Banner = () => {
     "Web Developer",
     "Web Designer",
     "UI/UX Designer",
-    "Full Stack Web",
+    "Frontend Web Developer",
+    "Backend Web Developer",
+    "Full Stack Web Developer",
   ];
   const [text, setText] = useState("");
   // eslint-disable-next-line
