@@ -6,12 +6,13 @@ import projImg3 from "../images/img/project-img3.png";
 import projImg4 from "../images/img/project-img4.png";
 import projImg5 from "../images/img/project-img5.png";
 import projImg6 from "../images/img/project-img6.png";
+import projImg7 from "../images/img/project-img7.png";
 import colorSharp2 from "../images/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
 
 export const Projects = () => {
-  const projects = [
+  const projects1 = [
     {
       title: "Videogame app",
       description: "Design & Development",
@@ -30,20 +31,31 @@ export const Projects = () => {
       imgUrl: projImg3,
     },
     {
-      title: "Movies app",
+      title: "Weather app",
       description: "Design & Development",
       imgUrl: projImg4,
+      url: "https://weatherapparb.netlify.app/",
     },
     {
       title: "Students app",
       description: "Design & Development",
       imgUrl: projImg5,
+      url: "https://students-app.netlify.app/",
     },
     {
       title: "My first portfolio",
       description: "Design & Development",
       imgUrl: projImg6,
       url: "https://portafolioarb.netlify.app/",
+    },
+  ];
+
+  const projects2 = [
+    {
+      title: "Movies app",
+      description: "Desing & Development",
+      imgUrl: projImg7,
+      url: "https://moviesapparb.netify.app/",
     },
   ];
 
@@ -97,7 +109,7 @@ export const Projects = () => {
                     >
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {projects.map((project, index) => {
+                          {projects1.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -109,7 +121,17 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <h1>Comming soon more projects here...</h1>
+                        <Row>
+                          {projects2.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                onClick={() => handleProjectClick(project.url)}
+                              />
+                            );
+                          })}
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <h1>Comming soon more projects here...</h1>
