@@ -1,9 +1,12 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../images/img/project-img1.png";
 import projImg2 from "../images/img/project-img2.png";
 import projImg3 from "../images/img/project-img3.png";
+import projImg4 from "../images/img/project-img1.png";
+import projImg5 from "../images/img/project-img2.png";
+import projImg6 from "../images/img/project-img3.png";
 import colorSharp2 from "../images/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -14,13 +17,13 @@ export const Projects = () => {
       title: "Videogame app",
       description: "Design & Development",
       imgUrl: projImg1,
-      url: "https://videogamesarb.up.railway.app/"
+      url: "https://videogamesarb.up.railway.app/",
     },
     {
       title: "Pokemon app",
       description: "Design & Development",
       imgUrl: projImg2,
-      url:"https://frontend-pokemons-app-production.up.railway.app/"
+      url: "https://frontend-pokemons-app-production.up.railway.app/",
     },
     {
       title: "Foods app",
@@ -30,25 +33,25 @@ export const Projects = () => {
     {
       title: "Movies app",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: projImg4,
     },
     {
       title: "Students app",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: projImg5,
     },
     {
       title: "My first portfolio",
       description: "Design & Development",
-      imgUrl: projImg3,
-      url:"https://portafolioarb.netlify.app/"
+      imgUrl: projImg6,
+      url: "https://portafolioarb.netlify.app/",
     },
   ];
 
-    // add this function to handle the click event
-    const handleProjectClick = (url) => {
-      window.location.href = url;
-    };
+  // add this function to handle the click event
+  const handleProjectClick = (url) => {
+    window.location.href = url;
+  };
 
   return (
     <section className="project" id="projects">
@@ -107,7 +110,7 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                      <h1>Add projects here</h1>
+                        <h1>Add projects here</h1>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <h1>Add projects here</h1>
