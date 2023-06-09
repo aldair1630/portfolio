@@ -91,7 +91,12 @@ export const NavBar = () => {
                 <img src={navIcon3} alt="" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
+            <button
+              className="vvd"
+              onClick={() =>
+                (window.location.href = "mailto:djaldair14@gmail.com")
+              }
+            >
               <span>Let's connect</span>
             </button>
           </span>

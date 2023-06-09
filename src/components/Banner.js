@@ -99,7 +99,11 @@ export const Banner = () => {
                     and am always looking to improve and learn new technologies
                     to provide cutting edge solutions.
                   </p>
-                  <button onClick={() => console.log("connect")}>
+                  <button
+                    onClick={() =>
+                      (window.location.href = "mailto:djaldair14@gmail.com")
+                    }
+                  >
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
                 </div>
