@@ -55,7 +55,7 @@ export const Projects = () => {
       title: "Movies app",
       description: "Desing & Development",
       imgUrl: projImg7,
-      url: "https://moviesapparb.netify.app/",
+      url: "https://moviesapparb.netlify.app/",
     },
   ];
 
