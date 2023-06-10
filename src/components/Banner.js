@@ -85,19 +85,16 @@ export const Banner = () => {
                   <p>
                     I am a developer with experience building web projects using
                     React, Redux, Express and PostgreSQL. I have worked on
-                    several successful projects, from small applications to
-                    scalable enterprise solutions. My skills in React and Redux
-                    allow me to create dynamic and efficient user interfaces,
-                    while my experience in Express and PostgreSQL allow me to
-                    create strong and secure back-end solutions. I also have
-                    skills in state management, routing and user authentication
-                    in web applications. I can implement high-quality solutions
-                    on the frontend and backend, creating a complete and
-                    consistent user experience, detail-oriented and
-                    results-focused, always striving to meet project deadlines
-                    and customer needs. I am committed to programming excellence
-                    and am always looking to improve and learn new technologies
-                    to provide cutting edge solutions.
+                    several successful self-made projects, my skills in React
+                    and Redux allow me to create dynamic and efficient user
+                    interfaces, while my experience in Express and PostgreSQL
+                    allow me to create strong and secure back-end solutions. I
+                    also have skills in state management, routing and user
+                    authentication in web applications. I can implement high
+                    quality solutions in the frontend and backend, generating a
+                    complete user experience, oriented to details and focused on
+                    results. I am committed to excellence in programming and am
+                    always looking to improve and learn new technologies.
                   </p>
                   <button
                     onClick={() =>
