@@ -47,6 +47,10 @@ h6 {
   line-height: normal;
 }
 
+a{
+  color:white !important;
+}
+
 p,
 a,
 li,

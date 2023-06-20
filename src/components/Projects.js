@@ -1,12 +1,13 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../images/img/project-img1.png";
-import projImg2 from "../images/img/project-img2.png";
+import projImg2 from "../images/img/project-img2.jpg";
 import projImg3 from "../images/img/project-img3.png";
 import projImg4 from "../images/img/project-img4.png";
 import projImg5 from "../images/img/project-img5.png";
 import projImg6 from "../images/img/project-img6.png";
 import projImg7 from "../images/img/project-img7.png";
+import projImg8 from "../images/img/project-img8.png";
 import colorSharp2 from "../images/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -20,41 +21,45 @@ export const Projects = () => {
       url: "https://videogamesarb.up.railway.app/",
     },
     {
-      title: "Pokemon app",
+      title: "Dogs app",
       description: "Design & Development",
       imgUrl: projImg2,
-      url: "https://frontend-pokemons-app-production.up.railway.app/",
     },
     {
-      title: "Foods app",
+      title: "Pokemons app",
       description: "Design & Development",
       imgUrl: projImg3,
     },
     {
-      title: "Weather app",
+      title: "Fods app",
       description: "Design & Development",
       imgUrl: projImg4,
+    },
+    {
+      title: "Weather app",
+      description: "Design & Development",
+      imgUrl: projImg5,
       url: "https://weatherapparb.netlify.app/",
     },
     {
       title: "Students app",
       description: "Design & Development",
-      imgUrl: projImg5,
-      url: "https://students-app.netlify.app/",
-    },
-    {
-      title: "My first portfolio",
-      description: "Design & Development",
       imgUrl: projImg6,
-      url: "https://portafolioarb.netlify.app/",
+      url: "https://students-app.netlify.app/",
     },
   ];
 
   const projects2 = [
     {
-      title: "Movies app",
+      title: "My first portfolio",
       description: "Desing & Development",
       imgUrl: projImg7,
+      url: "https://portafolioarb.netlify.app/",
+    },
+    {
+      title: "Movies app",
+      description: "Desing & Development",
+      imgUrl: projImg8,
       url: "https://moviesapparb.netlify.app/",
     },
   ];
