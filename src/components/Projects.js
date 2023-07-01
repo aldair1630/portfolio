@@ -24,6 +24,7 @@ export const Projects = () => {
       title: "Dogs app",
       description: "Design & Development",
       imgUrl: projImg2,
+      url: "https://frontend-dogs-app-production.up.railway.app/",
     },
     {
       title: "Pokemons app",
