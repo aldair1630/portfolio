@@ -18,23 +18,25 @@ export const Projects = () => {
       title: "Videogame app",
       description: "Design & Development",
       imgUrl: projImg1,
-      url: "https://videogamesarb.up.railway.app/",
+      url: "https://frontend-videogames-app.netlify.app/",
     },
     {
       title: "Dogs app",
       description: "Design & Development",
       imgUrl: projImg2,
-      url: "https://frontend-dogs-app-production.up.railway.app/",
+      url: "https://frontend-dogs-app.netlify.app/",
     },
     {
       title: "Pokemons app",
       description: "Design & Development",
       imgUrl: projImg3,
+      url: "https://frontend-pokemons-app.netlify.app/",
     },
     {
       title: "Fods app",
       description: "Design & Development",
       imgUrl: projImg4,
+      url: "https://frontend-foods-app.netlify.app/",
     },
     {
       title: "Weather app",
