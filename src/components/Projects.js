@@ -9,6 +9,8 @@ import projImg6 from "../images/img/project-img6.png";
 import projImg7 from "../images/img/project-img7.png";
 import projImg8 from "../images/img/project-img8.png";
 import projImg10 from "../images/img/project-img10.png";
+import projImg11 from "../images/img/project-img11.png";
+import projImg12 from "../images/img/project-img12.png";
 import colorSharp2 from "../images/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -71,6 +73,18 @@ export const Projects = () => {
       description: "Desing & Development",
       imgUrl: projImg10,
       url: "https://task-app-tsx.netlify.app/",
+    },
+    {
+      title: "NextJS app",
+      description: "Desing & Development",
+      imgUrl: projImg11,
+      url: "https://nextjs-firstproject-mu.vercel.app/",
+    },
+    {
+      title: "Images Generator IA-Dalle",
+      description: "Desing & Development",
+      imgUrl: projImg12,
+      url: "https://ia-dalle.vercel.app/",
     },
   ];
 
