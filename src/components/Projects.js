@@ -8,6 +8,7 @@ import projImg5 from "../images/img/project-img5.png";
 import projImg6 from "../images/img/project-img6.png";
 import projImg7 from "../images/img/project-img7.png";
 import projImg8 from "../images/img/project-img8.png";
+import projImg9 from "../images/img/project-img9.png";
 import projImg10 from "../images/img/project-img10.png";
 import projImg11 from "../images/img/project-img11.png";
 import projImg12 from "../images/img/project-img12.png";
@@ -67,6 +68,12 @@ export const Projects = () => {
       description: "Desing & Development",
       imgUrl: projImg8,
       url: "https://moviesapparb.netlify.app/",
+    },
+    {
+      title: "Ecommerce",
+      description: "Desing & Development",
+      imgUrl: projImg9,
+      url: "https://ecommerce-arb.netlify.app/",
     },
     {
       title: "Tasks app",
