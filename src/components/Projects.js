@@ -12,6 +12,7 @@ import projImg9 from "../images/img/project-img9.png";
 import projImg10 from "../images/img/project-img10.png";
 import projImg11 from "../images/img/project-img11.png";
 import projImg12 from "../images/img/project-img12.png";
+import projImg13 from "../images/img/project-img13.png";
 import colorSharp2 from "../images/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -95,6 +96,15 @@ export const Projects = () => {
     },
   ];
 
+  const projects3 = [
+    {
+      title: "Hotel Reservation",
+      description: "Desing & Development",
+      imgUrl: projImg13,
+      url: "https://reservedhotel.netlify.app/",
+    },
+  ];
+
   // add this function to handle the click event
   const handleProjectClick = (url) => {
     window.location.href = url;
@@ -170,7 +180,17 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <h1>Comming soon more projects here...</h1>
+                        <Row>
+                          {projects3.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                onClick={() => handleProjectClick(project.url)}
+                              />
+                            );
+                          })}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
