@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 app.use(
   cors({
-    origin: "*", // Reemplaza con la URL de tu frontend
+    origin: "http://localhost:3000", // Reemplaza con la URL de tu frontend
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Habilita el uso de cookies, si es necesario
   })
@@ -16,6 +16,8 @@ app.use(
 app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
+// console.log(process.env.EMAIL_USER);
+// console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
   host: "smtp.mandrillapp.com",
