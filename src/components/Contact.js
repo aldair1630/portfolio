@@ -27,22 +27,43 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("https://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "Application/json;charset=utf-8",
-      },
-      body: JSON.stringity(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ success: true, message: "Message sent successfully" });
-    } else {
+
+    try {
+      let response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8", // Cambié "Application" a "application"
+        },
+        body: JSON.stringify(formDetails),
+      });
+
+      setButtonText("Send");
+
+      if (response.ok) {
+        let result = await response.json();
+        setFormDetails(formInitialDetails);
+
+        if (result.code === 200) {
+          setStatus({ success: true, message: "Message sent successfully" });
+        } else {
+          setStatus({
+            success: false,
+            message: "Something went wrong, please try again",
+          });
+        }
+      } else {
+        // Manejar errores de respuesta HTTP aquí si es necesario
+        setStatus({
+          success: false,
+          message: "Server error. Please try again later.",
+        });
+      }
+    } catch (error) {
+      // Manejar errores de red u otros errores inesperados aquí
+      console.error("Error during request:", error);
       setStatus({
         success: false,
-        message: "Something went wrong, please try again",
+        message: "An error occurred. Please try again later.",
       });
     }
   };

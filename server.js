@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
@@ -5,18 +6,27 @@ const nodemailer = require("nodemailer");
 
 // server used to send send emails
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000", // Reemplaza con la URL de tu frontend
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // Habilita el uso de cookies, si es necesario
+  })
+);
 app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+// console.log(process.env.EMAIL_USER);
+// console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.mandrillapp.com",
+  port: 587,
+  // secure: true,
+  // service: "gmail",
   auth: {
-    user: "********@gmail.com",
-    pass: "",
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
