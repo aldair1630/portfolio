@@ -22,7 +22,7 @@ export const Footer = () => {
               <a href="https://www.facebook.com/yosoyaldair">
                 <img src={navIcon2} alt={navIcon2} />
               </a>
-              <a href="https://www.instagram.com/djaldair14/">
+              <a href="https://www.instagram.com/aldair.1630/">
                 <img src={navIcon3} alt={navIcon3} />
               </a>
               <p>Copyright 2023. All Rights Reserver</p>

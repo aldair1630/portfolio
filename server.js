@@ -6,13 +6,14 @@ const nodemailer = require("nodemailer");
 
 // server used to send send emails
 const app = express();
-app.use(
-  cors({
-    origin: "http://localhost:3000", // Reemplaza con la URL de tu frontend
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true, // Habilita el uso de cookies, si es necesario
-  })
-);
+app.use(cors());
+
+//! ESTO VA DENTRO DE CORS POR SI QUIERES ESPECIFICAR LA RUTA
+//   {
+//   origin: "http://localhost:3000", // Reemplaza con la URL de tu frontend
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   credentials: true, // Habilita el uso de cookies, si es necesario
+// }
 app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
