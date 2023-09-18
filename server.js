@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 app.use(
   cors({
-    origin: "https://portfolioarb.netlify.app/", // Reemplaza con la URL de tu frontend
+    origin: "http://localhost:3000", // Reemplaza con la URL de tu frontend
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Habilita el uso de cookies, si es necesario
   })
