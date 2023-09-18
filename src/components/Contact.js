@@ -27,12 +27,12 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-
+  
     try {
       let response = await fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json;charset=utf-8", // Cambié "Application" a "application"
+          "Content-Type": "application/json;charset=utf-8",
         },
         body: JSON.stringify(formDetails),
       });
