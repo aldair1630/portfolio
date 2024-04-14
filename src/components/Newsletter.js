@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
-export const Newsletter = ({ onValidated, status, message }) => {
+export const Newsletter = ({ onValidated, status }) => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
@@ -28,8 +28,12 @@ export const Newsletter = ({ onValidated, status, message }) => {
           <Col lg={12} md={6} xl={5}>
             <h3>Subscribe to our newsletter</h3>
             {status === "sending" && <Alert>Sending...</Alert>}
-            {status === "error" && <Alert variant="danger">{message}</Alert>}
-            {status === "success" && <Alert variant="success">{message}</Alert>}
+            {status === "error" && (
+              <Alert variant="danger">Oops! something went wrong</Alert>
+            )}
+            {status === "success" && (
+              <Alert variant="success">Message send successfully</Alert>
+            )}
           </Col>
           <Col md={6} xl={7}>
             <form onSubmit={handleSubmit}>
