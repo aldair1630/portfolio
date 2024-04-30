@@ -1,10 +1,24 @@
 import Carousel from "react-multi-carousel";
 import { Container, Row, Col } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../images/img/meter1.svg";
-import meter2 from "../images/img/meter2.svg";
-import meter3 from "../images/img/meter3.svg";
 import colorSharp from "../images/img/color-sharp.png";
+import html from "../images/img/icons8-html.svg";
+import css from "../images/img/icons8-css.svg";
+import javascript from "../images/img/icons8-javascript-logo.svg";
+import react from "../images/img/icons8-react.svg";
+import redux from "../images/img/icons8-redux.svg";
+import nodejs from "../images/img/icons8-nodejs.svg";
+import postgresql from "../images/img/icons8-postgresql.svg";
+import mongodb from "../images/img/icons8-mongodb.svg";
+import php from "../images/img/icons8-php-logo.svg";
+import wordpress from "../images/img/icons8-wordpress.svg";
+import bootstrap from "../images/img/icons8-bootstrap.svg";
+import tailwind from "../images/img/icons8-tailwind-css.svg";
+import java from "../images/img/icons8-java.svg";
+import python from "../images/img/icons8-python.svg";
+import csharp from "../images/img/icons8-c.svg";
+import git from "../images/img/icons8-git.svg";
+import github from "../images/img/icons8-github.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -57,28 +71,72 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt={{ meter1 }} />
-                  <h5>Web development</h5>
+                  <img src={html} alt={html} />
+                  <h5>HTML</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt={meter2} />
-                  <h5>Brand Identity</h5>
+                  <img src={css} alt={css} />
+                  <h5>CSS</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt={meter3} />
-                  <h5>Logo Desing</h5>
+                  <img src={javascript} alt={javascript} />
+                  <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt={meter1} />
-                  <h5>Front-End</h5>
+                  <img src={react} alt={react} />
+                  <h5>React</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt={meter2} />
-                  <h5>Back-End</h5>
+                  <img src={redux} alt={redux} />
+                  <h5>Redux</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt={meter2} />
-                  <h5>Database</h5>
+                  <img src={nodejs} alt={nodejs} />
+                  <h5>Express</h5>
+                </div>
+                <div className="item">
+                  <img src={postgresql} alt={postgresql} />
+                  <h5>PostgreSQL</h5>
+                </div>
+                <div className="item">
+                  <img src={mongodb} alt={mongodb} />
+                  <h5>MongoDB</h5>
+                </div>
+                <div className="item">
+                  <img src={php} alt={php} />
+                  <h5>PHP</h5>
+                </div>
+                <div className="item">
+                  <img src={wordpress} alt={wordpress} />
+                  <h5>WordPress</h5>
+                </div>
+                <div className="item">
+                  <img src={bootstrap} alt={bootstrap} />
+                  <h5>Bootstrap</h5>
+                </div>
+                <div className="item">
+                  <img src={tailwind} alt={tailwind} />
+                  <h5>Tailwind CSS</h5>
+                </div>
+                <div className="item">
+                  <img src={java} alt={java} />
+                  <h5>Java</h5>
+                </div>
+                <div className="item">
+                  <img src={python} alt={python} />
+                  <h5>Python</h5>
+                </div>
+                <div className="item">
+                  <img src={csharp} alt={csharp} />
+                  <h5>C Sharp</h5>
+                </div>
+                <div className="item">
+                  <img src={git} alt={git} />
+                  <h5>Git</h5>
+                </div>
+                <div className="item">
+                  <img src={github} alt={github} />
+                  <h5>GitHub</h5>
                 </div>
               </Carousel>
             </div>
