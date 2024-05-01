@@ -99,9 +99,9 @@ export const Projects = () => {
   const projects3 = [
     {
       title: "Hotel Reservation",
-      description: "Desing & Development",
+      description: "JSS, Emotion, React, MUI",
       imgUrl: projImg13,
-      url: "https://reservedhotel.netlify.app/",
+      url: "https://hotel-flame-theta.vercel.app/",
     },
   ];
 
