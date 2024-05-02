@@ -47,8 +47,8 @@ h6 {
   line-height: normal;
 }
 
-a{
-  color:white !important;
+a {
+  color: white !important;
 }
 
 p,
@@ -644,4 +644,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #b8b8b8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/* ROTACION DEL TEXTO EN BANNER */
+.txt-rotate {
+  transition: all 0.2s ease-in-out;
 }

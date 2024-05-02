@@ -20,7 +20,7 @@ export const Banner = () => {
   // eslint-disable-next-line
   const [index, setIndex] = useState(1);
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
+  const period = 1000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -53,7 +53,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(200); // Reducir este valor para hacer que el texto se agregue más rápido
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
