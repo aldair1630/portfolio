@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Alert } from "react-bootstrap";
 import contactImg from "../images/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -15,7 +15,7 @@ export const Contact = () => {
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
+  const [status, setStatus] = useState({ success: null, message: "" });
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -27,9 +27,10 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
+    setStatus({ success: null, message: "" });
 
     try {
-      let response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -40,7 +41,7 @@ export const Contact = () => {
       setButtonText("Send");
 
       if (response.ok) {
-        let result = await response.json();
+        const result = await response.json();
         setFormDetails(formInitialDetails);
 
         if (result.code === 200) {
@@ -48,18 +49,16 @@ export const Contact = () => {
         } else {
           setStatus({
             success: false,
-            message: "Something went wrong, please try again",
+            message: result.error || "Something went wrong, please try again",
           });
         }
       } else {
-        // Manejar errores de respuesta HTTP aquí si es necesario
         setStatus({
           success: false,
-          message: "Server error. Please try again later.",
+          message: `Server error: ${response.status} ${response.statusText}`,
         });
       }
     } catch (error) {
-      // Manejar errores de red u otros errores inesperados aquí
       console.error("Error during request:", error);
       setStatus({
         success: false,
@@ -94,6 +93,11 @@ export const Contact = () => {
                   }
                 >
                   <h2>Get In Touch</h2>
+                  {status.message && (
+                    <Alert variant={status.success ? "success" : "danger"}>
+                      {status.message}
+                    </Alert>
+                  )}
                   <form onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
