@@ -275,7 +275,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 .banner h1 {
-  font-size: 65px;
+  font-size: 55px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -321,6 +321,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: translateY(-20px);
   }
 }
+
+.banner .wrap {
+  display: block;
+  height: 1.4em;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .banner .wrap {
+    height: 2em;
+  }
+}
+
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
