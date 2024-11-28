@@ -19,6 +19,8 @@ import python from "../images/img/icons8-python.svg";
 import csharp from "../images/img/icons8-c.svg";
 import git from "../images/img/icons8-git.svg";
 import github from "../images/img/icons8-github.svg";
+import nextjs from "../images/img/icons8-nextjs.svg";
+import mysql from "../images/img/icons8-mysql.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -87,12 +89,20 @@ export const Skills = () => {
                   <h5>React</h5>
                 </div>
                 <div className="item">
+                  <img src={nextjs} alt={nextjs} />
+                  <h5>NextJS</h5>
+                </div>
+                <div className="item">
                   <img src={redux} alt={redux} />
                   <h5>Redux</h5>
                 </div>
                 <div className="item">
                   <img src={nodejs} alt={nodejs} />
-                  <h5>Express</h5>
+                  <h5>ExpressJS</h5>
+                </div>
+                <div className="item">
+                  <img src={mysql} alt={mysql} />
+                  <h5>MySQL</h5>
                 </div>
                 <div className="item">
                   <img src={postgresql} alt={postgresql} />
