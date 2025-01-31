@@ -12,7 +12,7 @@ const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 export const Contact = () => {
   const formRef = useRef(); // Referencia para el formulario
   const formInitialDetails = {
-    user_name: "",
+    name: "",
     lastName: "",
     user_email: "",
     phone: "",
@@ -82,11 +82,11 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          name="user_name"
-                          value={formDetails.user_name}
+                          name="name"
+                          value={formDetails.name}
                           placeholder="First Name"
                           onChange={(e) =>
-                            onFormUpdate("user_name", e.target.value)
+                            onFormUpdate("name", e.target.value)
                           }
                         />
                       </Col>
