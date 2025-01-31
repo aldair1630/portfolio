@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import contactImg from "../images/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import emailjs from "@emailjs/browser";
+
+const serviceId = process.env.REACT_APP_SERVICE_ID;
+const templateId = process.env.REACT_APP_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
 export const Contact = () => {
+  const formRef = useRef(); // Referencia para el formulario
   const formInitialDetails = {
-    firstName: "",
+    user_name: "",
     lastName: "",
-    email: "",
+    user_email: "",
     phone: "",
     message: "",
   };
@@ -30,40 +36,13 @@ export const Contact = () => {
     setStatus({ success: null, message: "" });
 
     try {
-      const response = await fetch("http://localhost:5000/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      });
-
-      setButtonText("Send");
-
-      if (response.ok) {
-        const result = await response.json();
-        setFormDetails(formInitialDetails);
-
-        if (result.code === 200) {
-          setStatus({ success: true, message: "Message sent successfully" });
-        } else {
-          setStatus({
-            success: false,
-            message: result.error || "Something went wrong, please try again",
-          });
-        }
-      } else {
-        setStatus({
-          success: false,
-          message: `Server error: ${response.status} ${response.statusText}`,
-        });
-      }
+      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);
+      setStatus({ success: true, message: "Form sent successfully!" });
     } catch (error) {
-      console.error("Error during request:", error);
-      setStatus({
-        success: false,
-        message: "An error occurred. Please try again later.",
-      });
+      console.error("Error:", error);
+      setStatus({ success: false, message: "Something went wrong" });
+    } finally {
+      setButtonText("Submit");
     }
   };
 
@@ -98,21 +77,23 @@ export const Contact = () => {
                       {status.message}
                     </Alert>
                   )}
-                  <form onSubmit={handleSubmit}>
+                  <form ref={formRef} onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.firstName}
+                          name="user_name"
+                          value={formDetails.user_name}
                           placeholder="First Name"
                           onChange={(e) =>
-                            onFormUpdate("firstName", e.target.value)
+                            onFormUpdate("user_name", e.target.value)
                           }
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
+                          name="lastName"
                           value={formDetails.lastName}
                           placeholder="Last Name"
                           onChange={(e) =>
@@ -123,16 +104,18 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="email"
-                          value={formDetails.email}
+                          name="user_email"
+                          value={formDetails.user_email}
                           placeholder="Email Address"
                           onChange={(e) =>
-                            onFormUpdate("email", e.target.value)
+                            onFormUpdate("user_email", e.target.value)
                           }
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
+                          name="phone"
                           value={formDetails.phone}
                           placeholder="Phone No."
                           onChange={(e) =>
@@ -143,6 +126,7 @@ export const Contact = () => {
                       <Col size={12} className="px-1">
                         <textarea
                           rows="6"
+                          name="message"
                           value={formDetails.message}
                           placeholder="Message"
                           onChange={(e) =>
