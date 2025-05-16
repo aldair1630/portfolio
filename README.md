@@ -25,6 +25,8 @@ This is my personal portfolio, a web application developed using React. It serve
 - HTML5
 - CSS3
 - JavaScript
+- Bootstrap
+- Animate.css
 
 ## Contributions
 
@@ -36,6 +38,6 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 ## Contact
 
-- Linkedin: https://www.linkedin.com/in/aldair1630/
+- Linkedin: https://www.linkedin.com/in/aldair-rodriguez-5b0a431a3/
 - Email: djaldair14@gmail.com
-- Whatsapp: +57 3218978096
+- Whatsapp: +57 3218978102
