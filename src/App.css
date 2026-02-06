@@ -504,6 +504,37 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+/************ Skills Continuous Marquee ************/
+.skills-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+.skills-track {
+  display: flex;
+  align-items: center;
+  animation: skills-scroll 5s linear infinite;
+  will-change: transform;
+  gap: 40px;
+}
+.skill-bx .item {
+  flex: 0 0 auto;
+  min-width: 120px;
+  text-align: center;
+}
+.skill-bx .item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+@keyframes skills-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);

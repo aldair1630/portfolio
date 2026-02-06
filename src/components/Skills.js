@@ -1,6 +1,4 @@
-import Carousel from "react-multi-carousel";
 import { Container, Row, Col } from "react-bootstrap";
-import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../images/img/color-sharp.png";
 import html from "../images/img/icons8-html.svg";
 import css from "../images/img/icons8-css.svg";
@@ -23,24 +21,29 @@ import nextjs from "../images/img/icons8-nextjs.svg";
 import mysql from "../images/img/icons8-mysql.svg";
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+  const skills = [
+    { img: html, label: "HTML" },
+    { img: css, label: "CSS" },
+    { img: javascript, label: "JavaScript" },
+    { img: react, label: "React" },
+    { img: nextjs, label: "NextJS" },
+    { img: redux, label: "Redux" },
+    { img: nodejs, label: "ExpressJS" },
+    { img: mysql, label: "MySQL" },
+    { img: postgresql, label: "PostgreSQL" },
+    { img: mongodb, label: "MongoDB" },
+    { img: php, label: "PHP" },
+    { img: wordpress, label: "WordPress" },
+    { img: bootstrap, label: "Bootstrap" },
+    { img: tailwind, label: "Tailwind CSS" },
+    { img: java, label: "Java" },
+    { img: python, label: "Python" },
+    { img: csharp, label: "C Sharp" },
+    { img: git, label: "Git" },
+    { img: github, label: "GitHub" },
+  ];
+
+  const skillsLoop = [...skills, ...skills];
 
   return (
     <section className="skill" id="skills">
@@ -67,95 +70,16 @@ export const Skills = () => {
                 important to highlight that I have web security skills to ensure
                 that the website is safe and reliable.
               </p>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                keyBoardControl={true}
-                customTransition="all 3000ms linear"
-                transitionDuration={3000}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                className="skill-slider"
-              >
-                <div className="item">
-                  <img src={html} alt={html} />
-                  <h5>HTML</h5>
+              <div className="skills-marquee" aria-label="Carrusel continuo de habilidades">
+                <div className="skills-track">
+                  {skillsLoop.map((s, idx) => (
+                    <div className="item" key={idx}>
+                      <img src={s.img} alt={`${s.label} logo`} loading="lazy" />
+                      <h5>{s.label}</h5>
+                    </div>
+                  ))}
                 </div>
-                <div className="item">
-                  <img src={css} alt={css} />
-                  <h5>CSS</h5>
-                </div>
-                <div className="item">
-                  <img src={javascript} alt={javascript} />
-                  <h5>JavaScript</h5>
-                </div>
-                <div className="item">
-                  <img src={react} alt={react} />
-                  <h5>React</h5>
-                </div>
-                <div className="item">
-                  <img src={nextjs} alt={nextjs} />
-                  <h5>NextJS</h5>
-                </div>
-                <div className="item">
-                  <img src={redux} alt={redux} />
-                  <h5>Redux</h5>
-                </div>
-                <div className="item">
-                  <img src={nodejs} alt={nodejs} />
-                  <h5>ExpressJS</h5>
-                </div>
-                <div className="item">
-                  <img src={mysql} alt={mysql} />
-                  <h5>MySQL</h5>
-                </div>
-                <div className="item">
-                  <img src={postgresql} alt={postgresql} />
-                  <h5>PostgreSQL</h5>
-                </div>
-                <div className="item">
-                  <img src={mongodb} alt={mongodb} />
-                  <h5>MongoDB</h5>
-                </div>
-                <div className="item">
-                  <img src={php} alt={php} />
-                  <h5>PHP</h5>
-                </div>
-                <div className="item">
-                  <img src={wordpress} alt={wordpress} />
-                  <h5>WordPress</h5>
-                </div>
-                <div className="item">
-                  <img src={bootstrap} alt={bootstrap} />
-                  <h5>Bootstrap</h5>
-                </div>
-                <div className="item">
-                  <img src={tailwind} alt={tailwind} />
-                  <h5>Tailwind CSS</h5>
-                </div>
-                <div className="item">
-                  <img src={java} alt={java} />
-                  <h5>Java</h5>
-                </div>
-                <div className="item">
-                  <img src={python} alt={python} />
-                  <h5>Python</h5>
-                </div>
-                <div className="item">
-                  <img src={csharp} alt={csharp} />
-                  <h5>C Sharp</h5>
-                </div>
-                <div className="item">
-                  <img src={git} alt={git} />
-                  <h5>Git</h5>
-                </div>
-                <div className="item">
-                  <img src={github} alt={github} />
-                  <h5>GitHub</h5>
-                </div>
-              </Carousel>
+              </div>
             </div>
           </Col>
         </Row>
@@ -163,7 +87,7 @@ export const Skills = () => {
       <img
         className="background-image-left"
         src={colorSharp}
-        alt={colorSharp}
+        alt="Decorative background"
       />
     </section>
   );
