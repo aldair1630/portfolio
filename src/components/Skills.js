@@ -21,6 +21,71 @@ import nextjs from "../images/img/icons8-nextjs.svg";
 import mysql from "../images/img/icons8-mysql.svg";
 
 export const Skills = () => {
+  const labelAbbr = (label) =>
+    (label || "")
+      .split(/[^A-Za-z0-9]+/)
+      .filter(Boolean)
+      .map((w) => w[0])
+      .join("")
+      .slice(0, 3)
+      .toUpperCase();
+  const slugMap = {
+    Vite: "vite",
+    Firebase: "firebase",
+    AWS: "amazonaws",
+    Android: "android",
+    "React Native": "react",
+    Electron: "electron",
+    "Auth0": "auth0",
+    Jest: "jest",
+    jQuery: "jquery",
+    JSON: "json",
+    JWT: "jsonwebtokens",
+    Kotlin: "kotlin",
+    Flutter: "flutter",
+    Linux: "linux",
+    MariaDB: "mariadb",
+    "Material UI": "mui",
+    Azure: "microsoftazure",
+    npm: "npm",
+    Postman: "postman",
+    Prisma: "prisma",
+    RapidAPI: "rapidapi",
+    "REST API": "swagger",
+    Sequelize: "sequelize",
+    SQLite: "sqlite",
+    SQL: "microsoftsqlserver",
+    Stripe: "stripe",
+    "Styled Components": "styledcomponents",
+  };
+  const brandColor = {
+    AWS: "FF9900",
+    Azure: "0078D4",
+    RapidAPI: "0099FF",
+    SQL: "CC2927",
+    Linux: "FFFFFF",
+    SQLite: "4F9DBD",
+  };
+  const fallbackIconUrlFor = (label) => {
+    if (label === "AWS")
+      return "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg";
+    if (label === "Azure")
+      return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg";
+    if (label === "RapidAPI")
+      return "https://www.vectorlogo.zone/logos/rapidapi/rapidapi-icon.svg";
+    if (label === "SQL")
+      return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg";
+    return null;
+  };
+  const iconUrlFor = (label) => {
+    if (label === "AWS") return fallbackIconUrlFor(label);
+    const slug = slugMap[label];
+    if (!slug) return fallbackIconUrlFor(label);
+    const color = brandColor[label];
+    return color
+      ? `https://cdn.simpleicons.org/${slug}/${color}`
+      : `https://cdn.simpleicons.org/${slug}`;
+  };
   const skills = [
     { img: html, label: "HTML" },
     { img: css, label: "CSS" },
@@ -41,6 +106,34 @@ export const Skills = () => {
     { img: csharp, label: "C Sharp" },
     { img: git, label: "Git" },
     { img: github, label: "GitHub" },
+    { img: null, label: "Vite" },
+    { img: null, label: "Firebase" },
+    { img: null, label: "AWS" },
+    { img: null, label: "Android" },
+    { img: null, label: "React Native" },
+    { img: null, label: "Electron" },
+    { img: null, label: "Auth.js" },
+    { img: null, label: "Auth0" },
+    { img: null, label: "Jest" },
+    { img: null, label: "jQuery" },
+    { img: null, label: "JSON" },
+    { img: null, label: "JWT" },
+    { img: null, label: "Kotlin" },
+    { img: null, label: "Flutter" },
+    { img: null, label: "Linux" },
+    { img: null, label: "MariaDB" },
+    { img: null, label: "Material UI" },
+    { img: null, label: "Azure" },
+    { img: null, label: "npm" },
+    { img: null, label: "Postman" },
+    { img: null, label: "Prisma" },
+    { img: null, label: "RapidAPI" },
+    { img: null, label: "REST API" },
+    { img: null, label: "Sequelize" },
+    { img: null, label: "SQLite" },
+    { img: null, label: "SQL" },
+    { img: null, label: "Stripe" },
+    { img: null, label: "Styled Components" },
   ];
 
   const skillsLoop = [...skills, ...skills];
@@ -73,8 +166,24 @@ export const Skills = () => {
               <div className="skills-marquee" aria-label="Carrusel continuo de habilidades">
                 <div className="skills-track">
                   {skillsLoop.map((s, idx) => (
-                    <div className="item" key={idx}>
-                      <img src={s.img} alt={`${s.label} logo`} loading="lazy" />
+                    <div className={`item${s.img ? "" : " no-logo"}`} key={idx}>
+                      {s.img ? (
+                        <img src={s.img} alt={`${s.label} logo`} loading="lazy" />
+                      ) : iconUrlFor(s.label) ? (
+                        <img
+                          src={iconUrlFor(s.label)}
+                          alt={`${s.label} logo`}
+                          loading="lazy"
+                          onError={(e) => {
+                            const f = fallbackIconUrlFor(s.label);
+                            if (f && e.currentTarget.src !== f) {
+                              e.currentTarget.src = f;
+                            }
+                          }}
+                        />
+                      ) : (
+                        <span className="no-logo-badge">{labelAbbr(s.label)}</span>
+                      )}
                       <h5>{s.label}</h5>
                     </div>
                   ))}
