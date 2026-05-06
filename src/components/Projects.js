@@ -17,6 +17,8 @@ import colorSharp2 from "../images/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
 
+const placeholderImg = "https://via.placeholder.com/400x300/6c63ff/ffffff?text=Project";
+
 export const Projects = () => {
   const projects1 = [
     {
@@ -53,7 +55,7 @@ export const Projects = () => {
       title: "Students app",
       description: "React",
       imgUrl: projImg6,
-      url: "https://students-app.netlify.app/",
+      url: "https://github.com/aldair1630/students-app",
     },
   ];
 
@@ -94,14 +96,194 @@ export const Projects = () => {
       imgUrl: projImg12,
       url: "https://ia-dalle.vercel.app/",
     },
-  ];
-
-  const projects3 = [
     {
       title: "Hotel Reservation",
       description: "JSS, Emotion, React, MUI",
       imgUrl: projImg13,
       url: "https://hotel-flame-theta.vercel.app/",
+    },
+  ];
+
+  const projects3 = [
+    {
+      title: "Hostal App",
+      description: "App for hostal management",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/hostal-app",
+    },
+    {
+      title: "Sistema POS",
+      description: "Point of Sale System",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/Sistema-POS",
+    },
+    {
+      title: "Network Audit",
+      description: "Network auditing tool",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/NetworkAudit",
+    },
+    {
+      title: "Auditor Integral WiFi",
+      description: "WiFi auditing tool",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/AuditorIntegralWiFi",
+    },
+    {
+      title: "FRP Tool",
+      description: "Fast Reverse Proxy tool",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/frptool",
+    },
+    {
+      title: "Beyond Colombia",
+      description: "Travel and tourism app",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/beyond-colombia",
+    },
+  ];
+
+  const projects4 = [
+    {
+      title: "Documento App",
+      description: "Document management app",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/documentoapp",
+    },
+    {
+      title: "Travel Agency App",
+      description: "Travel booking application",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/travel-agency-app",
+    },
+    {
+      title: "Next Sport App",
+      description: "Sports management application",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/next-sport-app",
+    },
+    {
+      title: "DJ Master Beat",
+      description: "Music and DJ application",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/djmasterbeat",
+    },
+    {
+      title: "Infinity Technology",
+      description: "Technology services app",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/infinitytechnology",
+    },
+    {
+      title: "YouTube Automation Tool",
+      description: "Automation tool for YouTube",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/youtube_automation_tool",
+    },
+  ];
+
+  const projects5 = [
+    {
+      title: "YouTube Automation (Advanced)",
+      description: "Advanced YouTube automation",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/aldair_youtube_automation_tool",
+    },
+    {
+      title: "Port Scanner GUI",
+      description: "Graphical port scanner",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/PortScannerGUI",
+    },
+    {
+      title: "FRP Tool Website",
+      description: "Website for FRP Tool",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/frptool-website",
+    },
+    {
+      title: "Repara Facil",
+      description: "Repair management app",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/ReparaFacil",
+    },
+    {
+      title: "Hacking Tool",
+      description: "Security testing tool",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/hackingtool",
+    },
+    {
+      title: "Generative AI for Beginners",
+      description: "Learning resource for AI",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/generative-ai-for-beginners",
+    },
+  ];
+
+  const projects6 = [
+    {
+      title: "WhatsApp Hacking",
+      description: "WhatsApp security research",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/WhatsAppHacking",
+    },
+    {
+      title: "Electron POS App",
+      description: "POS system with Electron",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/electron-pos-app",
+    },
+    {
+      title: "Electro Estelar API",
+      description: "API for Electro Estelar",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/electroestelar-api",
+    },
+    {
+      title: "Electro Estelar",
+      description: "E-commerce platform",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/electroestelar",
+    },
+    {
+      title: "Conteo Technical Test",
+      description: "Technical test project",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/conteotechnicaltest",
+    },
+    {
+      title: "Tienda Colombia Digital",
+      description: "Digital store platform",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/tienda-colombia-digital",
+    },
+  ];
+
+  const projects7 = [
+    {
+      title: "SST",
+      description: "Safety and health at work",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/SST",
+    },
+    {
+      title: "Video Presentation Mom",
+      description: "Video presentation project",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/Video-Presentation-Mom",
+    },
+    {
+      title: "Metodologías para Análisis de Datos",
+      description: "Data analysis methodologies",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/Metodolog-as-para-el-An-lisis-de-Datos",
+    },
+    {
+      title: "Folleto",
+      description: "Brochure project",
+      imgUrl: placeholderImg,
+      url: "https://github.com/aldair1630/Folleto-",
     },
   ];
 
@@ -134,7 +316,7 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
-                      className="nav-pills mb-5 justify-content-center align-items-center"
+                      className="nav-pills mb-5 justify-content-center align-items-center flex-wrap"
                       id="pills-tab"
                     >
                       <Nav.Item>
@@ -182,6 +364,58 @@ export const Projects = () => {
                       <Tab.Pane eventKey="third">
                         <Row>
                           {projects3.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                onClick={() => handleProjectClick(project.url)}
+                              />
+                            );
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="fourth">
+                        <Row>
+                          {projects4.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                onClick={() => handleProjectClick(project.url)}
+                              />
+                            );
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="fifth">
+                        <Row>
+                          {projects5.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                onClick={() => handleProjectClick(project.url)}
+                              />
+                            );
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="sixth">
+                        <Row>
+                          {projects6.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                onClick={() => handleProjectClick(project.url)}
+                              />
+                            );
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="seventh">
+                        <Row>
+                          {projects7.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
