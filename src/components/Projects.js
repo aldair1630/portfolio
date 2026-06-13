@@ -17,6 +17,17 @@ import colorSharp2 from "../images/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
 
+// New image imports for projects
+import hostalAppImg from "../images/img/hostal app.png";
+import networkAuditImg from "../images/img/network audit.png";
+import auditorIntegralImg from "../images/img/Auditor integral.png";
+import frpToolImg from "../images/img/FrpTool.png";
+import beyondColombiaImg from "../images/img/beyond colombia.png";
+import travelAgencyImg from "../images/img/travel agency.png";
+import nextSportAppImg from "../images/img/next sport app.png";
+import djMasterBeatImg from "../images/img/djalex master beat.png";
+import infinityTechnologyImg from "../images/img/infinity technology.png";
+
 const placeholderImg = "https://via.placeholder.com/400x300/6c63ff/ffffff?text=Project";
 
 export const Projects = () => {
@@ -31,7 +42,7 @@ export const Projects = () => {
       title: "Dogs app",
       description: "APIRest, React, Redux, Express & PostgreSQL",
       imgUrl: projImg2,
-      url: "https://frontend-dogs-app.netlify.app/",
+      url: "https://frontend-dogs-app.netlify.netlify.app/",
     },
     {
       title: "Pokemons app",
@@ -108,7 +119,7 @@ export const Projects = () => {
     {
       title: "Hostal App",
       description: "App for hostal management",
-      imgUrl: placeholderImg,
+      imgUrl: hostalAppImg, // Updated
       url: "https://github.com/aldair1630/hostal-app",
     },
     {
@@ -120,25 +131,25 @@ export const Projects = () => {
     {
       title: "Network Audit",
       description: "Network auditing tool",
-      imgUrl: placeholderImg,
+      imgUrl: networkAuditImg, // Updated
       url: "https://github.com/aldair1630/NetworkAudit",
     },
     {
       title: "Auditor Integral WiFi",
       description: "WiFi auditing tool",
-      imgUrl: placeholderImg,
+      imgUrl: auditorIntegralImg, // Updated
       url: "https://github.com/aldair1630/AuditorIntegralWiFi",
     },
     {
       title: "FRP Tool",
       description: "Fast Reverse Proxy tool",
-      imgUrl: placeholderImg,
+      imgUrl: frpToolImg, // Updated
       url: "https://github.com/aldair1630/frptool",
     },
     {
       title: "Beyond Colombia",
       description: "Travel and tourism app",
-      imgUrl: placeholderImg,
+      imgUrl: beyondColombiaImg, // Updated
       url: "https://github.com/aldair1630/beyond-colombia",
     },
   ];
@@ -153,25 +164,25 @@ export const Projects = () => {
     {
       title: "Travel Agency App",
       description: "Travel booking application",
-      imgUrl: placeholderImg,
+      imgUrl: travelAgencyImg, // Updated
       url: "https://github.com/aldair1630/travel-agency-app",
     },
     {
       title: "Next Sport App",
       description: "Sports management application",
-      imgUrl: placeholderImg,
+      imgUrl: nextSportAppImg, // Updated
       url: "https://github.com/aldair1630/next-sport-app",
     },
     {
       title: "DJ Master Beat",
       description: "Music and DJ application",
-      imgUrl: placeholderImg,
+      imgUrl: djMasterBeatImg, // Updated
       url: "https://github.com/aldair1630/djmasterbeat",
     },
     {
       title: "Infinity Technology",
       description: "Technology services app",
-      imgUrl: placeholderImg,
+      imgUrl: infinityTechnologyImg, // Updated
       url: "https://github.com/aldair1630/infinitytechnology",
     },
     {
@@ -320,13 +331,25 @@ export const Projects = () => {
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="first">React Apps</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second">Web Apps</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">Full Stack</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="fourth">Business Apps</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="fifth">Web Projects</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="sixth">Security & Network</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="seventh">Learning & Other</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
