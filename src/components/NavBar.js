@@ -93,9 +93,7 @@ export const NavBar = () => {
             </div>
             <button
               className="vvd"
-              onClick={() =>
-                // (window.location.href = "mailto:djaldair14@gmail.com")
-                (window.location.href = "https://wa.me/+573128531245")
+              onClick={() =>window.open("https://wa.me/+573243630818", "_blank", "noopener,noreferrer")
               }
             >
               <span>Let's connect</span>

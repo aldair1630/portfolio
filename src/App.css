@@ -442,30 +442,35 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project .nav.nav-pills {
-  width: 72%;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  flex: 1 1 auto;
+  min-width: 120px;
 }
 
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
-  padding: 17px 0;
+  padding: 17px 10px;
   color: #fff;
   width: 100%;
-  font-size: 17px;
+  font-size: 16px;
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
   transition: 0.3s ease-in-out;
   text-align: center;
   z-index: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project .nav.nav-pills .nav-link::before {
@@ -488,19 +493,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 1px solid rgba(255, 255, 255, 1);
 }
 
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
+@media (max-width: 768px) {
+  .project .nav.nav-pills {
+    border-radius: 20px;
+  }
+  .project .nav.nav-pills .nav-item {
+    min-width: 50%;
+  }
+  .project .nav.nav-pills .nav-link {
+    font-size: 14px;
+    padding: 12px 5px;
+  }
 }
 
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
+@media (max-width: 480px) {
+  .project .nav.nav-pills .nav-item {
+    min-width: 100%;
+  }
 }
 
 .proj-imgbx {
