@@ -16,7 +16,7 @@ export const Banner = ({ data }) => {
   // State to track if we are currently deleting text
   const [isDeleting, setIsDeleting] = useState(false);
   // State for the current text being displayed
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   // Define animation speeds
   const typingSpeed = 150; // ms per character
   const deletingSpeed = 70; // ms per character
@@ -45,7 +45,7 @@ export const Banner = ({ data }) => {
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
-    
+
     if (!isDeleting) {
       // Typing phase
       let updatedText = fullText.substring(0, text.length + 1);
@@ -68,7 +68,8 @@ export const Banner = ({ data }) => {
         setIsFading(false);
       } else {
         // Continue deleting with fade effect
-        if (text.length <= 3) { // Start fade effect when word is short
+        if (text.length <= 3) {
+          // Start fade effect when word is short
           setIsFading(true);
         }
         let updatedText = fullText.substring(0, text.length - 1);
@@ -106,13 +107,13 @@ export const Banner = ({ data }) => {
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
-                    Hi! I'm Aldair{' '}
+                    Hi! I'm Aldair{" "}
                     <span className="txt-rotate">
-                      <span 
-                        className="wrap" 
+                      <span
+                        className="wrap"
                         style={{
                           opacity: isFading ? 0 : 1,
-                          transition: 'opacity 0.3s ease-out',
+                          transition: "opacity 0.3s ease-out",
                           // These styles are redundant as they are already in the CSS class '.txt-rotate .wrap'
                           // borderRight: '2px solid #fff',
                           // animation: 'blink 1s infinite'
@@ -125,7 +126,11 @@ export const Banner = ({ data }) => {
                   <p>{paragraphs}</p>
                   <button
                     onClick={() =>
-                      (window.location.href = "https://wa.me/+573128531245")
+                      window.open(
+                        "https://wa.me/+573128531245",
+                        "_blank",
+                        "noopener,noreferrer",
+                      )
                     }
                   >
                     Let’s Connect <ArrowRightCircle size={25} />

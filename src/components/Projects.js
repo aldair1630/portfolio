@@ -30,7 +30,8 @@ import infinityTechnologyImg from "../images/img/infinity technology.png";
 import frpToolWebsiteImg from "../images/img/frptool-website.png";
 import documentoAppImg from "../images/img/documento-app.jpeg";
 
-const placeholderImg = "https://via.placeholder.com/400x300/6c63ff/ffffff?text=Project";
+const placeholderImg =
+  "https://via.placeholder.com/400x300/6c63ff/ffffff?text=Project";
 
 export const Projects = () => {
   const projects1 = [
@@ -191,8 +192,6 @@ export const Projects = () => {
       url: "https://infinityfrptool.com/",
     },
   ];
-
-
 
   // add this function to handle the click event
   const handleProjectClick = (url) => {
