@@ -127,7 +127,7 @@ export const Banner = ({ data }) => {
                   <button
                     onClick={() =>
                       window.open(
-                        "https://wa.me/+573128531245",
+                        "https://wa.me/+573243630818",
                         "_blank",
                         "noopener,noreferrer",
                       )
