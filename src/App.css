@@ -517,6 +517,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+  width: 100%;
+  height: 220px; /* Fixed height to match first tab's image size */
+}
+
+.proj-imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures all images fit the container without distortion */
+  display: block;
 }
 
 .proj-imgbx::before {
@@ -527,6 +536,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   height: 0;
   transition: 0.4s ease-in-out;
+  z-index: 1;
 }
 
 .proj-imgbx:hover::before {
@@ -542,6 +552,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
+  z-index: 2; /* Ensures text stays on top of the image and gradient */
 }
 
 .proj-imgbx:hover .proj-txtx {

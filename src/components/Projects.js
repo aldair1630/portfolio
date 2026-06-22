@@ -27,6 +27,8 @@ import travelAgencyImg from "../images/img/travel agency.png";
 import nextSportAppImg from "../images/img/next sport app.png";
 import djMasterBeatImg from "../images/img/djalex master beat.png";
 import infinityTechnologyImg from "../images/img/infinity technology.png";
+import frpToolWebsiteImg from "../images/img/frptool-website.png";
+import documentoAppImg from "../images/img/documento-app.jpeg";
 
 const placeholderImg = "https://via.placeholder.com/400x300/6c63ff/ffffff?text=Project";
 
@@ -66,7 +68,7 @@ export const Projects = () => {
       title: "Students app",
       description: "React",
       imgUrl: projImg6,
-      url: "https://github.com/aldair1630/students-app",
+      url: "https://students-app.com/",
     },
   ];
 
@@ -120,13 +122,7 @@ export const Projects = () => {
       title: "Hostal App",
       description: "App for hostal management",
       imgUrl: hostalAppImg, // Updated
-      url: "https://github.com/aldair1630/hostal-app",
-    },
-    {
-      title: "Sistema POS",
-      description: "Point of Sale System",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/Sistema-POS",
+      url: "https://hostalapp.netlify.app/",
     },
     {
       title: "Network Audit",
@@ -141,7 +137,7 @@ export const Projects = () => {
       url: "https://github.com/aldair1630/AuditorIntegralWiFi",
     },
     {
-      title: "FRP Tool",
+      title: "FRP Tool Desktop",
       description: "Fast Reverse Proxy tool",
       imgUrl: frpToolImg, // Updated
       url: "https://github.com/aldair1630/frptool",
@@ -158,145 +154,45 @@ export const Projects = () => {
     {
       title: "Documento App",
       description: "Document management app",
-      imgUrl: placeholderImg,
+      imgUrl: documentoAppImg,
       url: "https://github.com/aldair1630/documentoapp",
     },
     {
       title: "Travel Agency App",
       description: "Travel booking application",
       imgUrl: travelAgencyImg, // Updated
-      url: "https://github.com/aldair1630/travel-agency-app",
+      url: "https://travelscaal.netlify.app/",
     },
     {
       title: "Next Sport App",
       description: "Sports management application",
       imgUrl: nextSportAppImg, // Updated
-      url: "https://github.com/aldair1630/next-sport-app",
+      url: "https://nextsportapp.netlify.app/",
     },
     {
       title: "DJ Master Beat",
       description: "Music and DJ application",
       imgUrl: djMasterBeatImg, // Updated
-      url: "https://github.com/aldair1630/djmasterbeat",
+      url: "https://djalexmasterbeat.com/",
     },
     {
       title: "Infinity Technology",
       description: "Technology services app",
       imgUrl: infinityTechnologyImg, // Updated
-      url: "https://github.com/aldair1630/infinitytechnology",
-    },
-    {
-      title: "YouTube Automation Tool",
-      description: "Automation tool for YouTube",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/youtube_automation_tool",
+      url: "https://infinitytechnology.com.co/",
     },
   ];
 
   const projects5 = [
     {
-      title: "YouTube Automation (Advanced)",
-      description: "Advanced YouTube automation",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/aldair_youtube_automation_tool",
-    },
-    {
-      title: "Port Scanner GUI",
-      description: "Graphical port scanner",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/PortScannerGUI",
-    },
-    {
       title: "FRP Tool Website",
       description: "Website for FRP Tool",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/frptool-website",
-    },
-    {
-      title: "Repara Facil",
-      description: "Repair management app",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/ReparaFacil",
-    },
-    {
-      title: "Hacking Tool",
-      description: "Security testing tool",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/hackingtool",
-    },
-    {
-      title: "Generative AI for Beginners",
-      description: "Learning resource for AI",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/generative-ai-for-beginners",
+      imgUrl: frpToolWebsiteImg,
+      url: "https://infinityfrptool.com/",
     },
   ];
 
-  const projects6 = [
-    {
-      title: "WhatsApp Hacking",
-      description: "WhatsApp security research",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/WhatsAppHacking",
-    },
-    {
-      title: "Electron POS App",
-      description: "POS system with Electron",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/electron-pos-app",
-    },
-    {
-      title: "Electro Estelar API",
-      description: "API for Electro Estelar",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/electroestelar-api",
-    },
-    {
-      title: "Electro Estelar",
-      description: "E-commerce platform",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/electroestelar",
-    },
-    {
-      title: "Conteo Technical Test",
-      description: "Technical test project",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/conteotechnicaltest",
-    },
-    {
-      title: "Tienda Colombia Digital",
-      description: "Digital store platform",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/tienda-colombia-digital",
-    },
-  ];
 
-  const projects7 = [
-    {
-      title: "SST",
-      description: "Safety and health at work",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/SST",
-    },
-    {
-      title: "Video Presentation Mom",
-      description: "Video presentation project",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/Video-Presentation-Mom",
-    },
-    {
-      title: "Metodologías para Análisis de Datos",
-      description: "Data analysis methodologies",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/Metodolog-as-para-el-An-lisis-de-Datos",
-    },
-    {
-      title: "Folleto",
-      description: "Brochure project",
-      imgUrl: placeholderImg,
-      url: "https://github.com/aldair1630/Folleto-",
-    },
-  ];
 
   // add this function to handle the click event
   const handleProjectClick = (url) => {
@@ -344,12 +240,6 @@ export const Projects = () => {
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="fifth">Web Projects</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="sixth">Security & Network</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="seventh">Learning & Other</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -413,32 +303,6 @@ export const Projects = () => {
                       <Tab.Pane eventKey="fifth">
                         <Row>
                           {projects5.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                onClick={() => handleProjectClick(project.url)}
-                              />
-                            );
-                          })}
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="sixth">
-                        <Row>
-                          {projects6.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                onClick={() => handleProjectClick(project.url)}
-                              />
-                            );
-                          })}
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="seventh">
-                        <Row>
-                          {projects7.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
