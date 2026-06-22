@@ -163,7 +163,7 @@ export const Skills = () => {
                 important to highlight that I have web security skills to ensure
                 that the website is safe and reliable.
               </p>
-              <div className="skills-marquee" aria-label="Carrusel continuo de habilidades">
+              <div className="skills-marquee" aria-label="Continuous skills carousel">
                 <div className="skills-track">
                   {skillsLoop.map((s, idx) => (
                     <div className={`item${s.img ? "" : " no-logo"}`} key={idx}>

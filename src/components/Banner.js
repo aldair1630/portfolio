@@ -8,7 +8,11 @@ import TrackVisibility from "react-on-screen";
 
 export const Banner = ({ data }) => {
   // Destructure props, provide defaults
-  const { texts, paragraphs } = data || {};
+  const { texts, paragraphs } = data || {
+    texts: ["Web Developer", "Full Stack Developer", "UI/UX Designer"],
+    paragraphs:
+      "I am a software developer passionate about creating innovative and efficient web applications. With experience in modern technologies like React, Node.js, and databases, I focus on delivering high-quality solutions that exceed expectations.",
+  };
   const toRotate = texts || []; // Default to empty array if texts is not provided
 
   // State for cycling through words
@@ -21,8 +25,6 @@ export const Banner = ({ data }) => {
   const typingSpeed = 150; // ms per character
   const deletingSpeed = 70; // ms per character
   const pauseBetweenWords = 1000; // ms pause after word is fully typed or deleted
-  // State to control fade effect during deletion
-  const [isFading, setIsFading] = useState(false);
 
   // State to manage the time delay for the next animation frame
   // This delta is updated based on typing/deleting speeds and pauses
@@ -39,7 +41,7 @@ export const Banner = ({ data }) => {
 
     // Cleanup function to clear the interval on component unmount or when dependencies change
     return () => clearInterval(ticker);
-  }, [delta, text, isDeleting, isFading, loopNum, toRotate]); // Dependencies for the effect. 'delta' changes trigger re-renders.
+  }, [delta, text, isDeleting, loopNum, toRotate]); // Dependencies for the effect. 'delta' changes trigger re-renders.
 
   // The 'tick' function handles the logic for typing and deleting text.
   const tick = () => {
@@ -65,13 +67,8 @@ export const Banner = ({ data }) => {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
         setDelta(500); // Pause before typing next word
-        setIsFading(false);
       } else {
-        // Continue deleting with fade effect
-        if (text.length <= 3) {
-          // Start fade effect when word is short
-          setIsFading(true);
-        }
+        // Continue deleting
         let updatedText = fullText.substring(0, text.length - 1);
         setText(updatedText);
         setDelta(deletingSpeed); // Set deleting duration
@@ -84,19 +81,14 @@ export const Banner = ({ data }) => {
     <section className="banner" id="home">
       <style>
         {`
-          @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-          }
           .txt-rotate .wrap {
             border-right: 2px solid #fff;
-            animation: blink 1s infinite;
             padding-right: 5px;
           }
         `}
       </style>
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
@@ -109,18 +101,7 @@ export const Banner = ({ data }) => {
                   <h1>
                     Hi! I'm Aldair{" "}
                     <span className="txt-rotate">
-                      <span
-                        className="wrap"
-                        style={{
-                          opacity: isFading ? 0 : 1,
-                          transition: "opacity 0.3s ease-out",
-                          // These styles are redundant as they are already in the CSS class '.txt-rotate .wrap'
-                          // borderRight: '2px solid #fff',
-                          // animation: 'blink 1s infinite'
-                        }}
-                      >
-                        {text}
-                      </span>
+                      <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>{paragraphs}</p>
